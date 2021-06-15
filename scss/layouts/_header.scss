@@ -83,7 +83,7 @@ header{
                 }
                 i {
                     float: right;
-                    display: inline-block;
+                    display: block;
                     padding: $pd-0;
                     font-size: $fs-0 - 2;
                 }
@@ -145,8 +145,6 @@ header{
                             border-radius: 50%;
                             margin-right: 4px;
                         }
-                        &:hover {
-                        }
                     }
                     .dropdown-toggle {
                         img {
@@ -187,7 +185,7 @@ header{
 
 .modal-content {
     overflow-y: scroll;
-    max-height: 500px;
+    max-height: 400px;
     ul {
         list-style: none;
         text-align: center;

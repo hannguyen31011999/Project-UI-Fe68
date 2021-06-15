@@ -112,7 +112,7 @@ header .header__menu.show .header__menu--content .header__menu--active img {
 
 header .header__menu.show .header__menu--content .header__menu--active i {
   float: right;
-  display: inline-block;
+  display: block;
   padding: 10px;
   font-size: 13px;
 }
@@ -241,7 +241,7 @@ header .header__menu.show .header__menu--content ul li a {
 
 .modal-content {
   overflow-y: scroll;
-  max-height: 500px;
+  max-height: 400px;
 }
 
 .modal-content ul {
