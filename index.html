@@ -15,6 +15,8 @@
     <!-- Carousel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <!-- Style -->
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -179,7 +181,8 @@
                 <a href="">
                     <img src="./img/trang-ti-16194117174325.jpg" alt="">
                 </a>
-                <button>
+                <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/l2XBzUZidig"
+                    href="javascript:;">
                     <img src="./img/play-video.png" alt="">
                 </button>
             </div>
@@ -187,7 +190,8 @@
                 <a href="">
                     <img src="./img/lat-mat-48h-16177782153424.png" alt="">
                 </a>
-                <button>
+                <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/kBY2k3G6LsM"
+                    href="javascript:;">
                     <img src="./img/play-video.png" alt="">
                 </button>
             </div>
@@ -195,7 +199,8 @@
                 <a href="">
                     <img src="./img/ban-tay-diet-quy-evil-expeller-16177781815781.png" alt="">
                 </a>
-                <button>
+                <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/uqJ9u7GSaYM"
+                    href="javascript:;">
                     <img src="./img/play-video.png" alt="">
                 </button>
             </div>
@@ -208,6 +213,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
     <!-- Carousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Fancybox  -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script>
 
         // feature menu
@@ -240,12 +247,23 @@
         $('.carousel__content').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 2000,
             dots: true,
             prevArrow: "<img src='./img/back-session.png' class='slick-prev' alt=''>",
             nextArrow: "<img src='./img/next-session.png' class='slick-next' alt=''>"
         });
+
+        // play video carousel
+        $('[data-fancybox]').fancybox({
+            toolbar: false,
+            smallBtn: true,
+            iframe: {
+                preload: false
+            },
+            width: 800,
+            height: 500,
+        })
     </script>
 </body>
 
