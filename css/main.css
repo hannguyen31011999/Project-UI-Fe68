@@ -313,8 +313,8 @@ header .header__menu.show .header__menu--content ul li a {
   background-color: rgba(139, 136, 136, 0.1);
   top: 50%;
   left: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   border-radius: 50%;
   opacity: 0;
   -webkit-transition: all .5s;
