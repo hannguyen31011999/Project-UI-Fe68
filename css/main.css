@@ -287,6 +287,7 @@ header .header__menu.show .header__menu--content ul li a {
 }
 
 .carousel {
+  position: relative;
   overflow: hidden;
 }
 
@@ -363,19 +364,38 @@ header .header__menu.show .header__menu--content ul li a {
 
 @media screen and (max-width: 1200px) {
   .carousel .carousel__content .carousel__item a img {
-    width: 100%;
     height: 430px;
-    -o-object-fit: fill;
-       object-fit: fill;
+  }
+  .carousel .carousel__content .carousel__item button {
+    border: none;
+    position: absolute;
+    background-color: rgba(139, 136, 136, 0.1);
+    top: 60%;
+    left: 45%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    border-radius: 50%;
   }
 }
 
 @media screen and (max-width: 992px) {
   .carousel .carousel__content .carousel__item a img {
-    width: 100%;
     height: 430px;
-    -o-object-fit: fill;
-       object-fit: fill;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel .carousel__content .carousel__item a img {
+    height: 245px;
+  }
+  .carousel .carousel__content .slick-prev {
+    left: 8%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
