@@ -6,13 +6,15 @@
 @import './ultils/mixin';
 
 // base
+@import './base/customize';
 @import './base/reset';
+
 
 // components
 
 
 // layout
-
+@import './layouts/header';
 
 
 // pages
