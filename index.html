@@ -173,8 +173,33 @@
             </div>
         </div>
     </header>
-    <section class="carousel">
-
+    <section class="carousel container-fluid">
+        <div class="carousel__content">
+            <div class="carousel__item">
+                <a href="">
+                    <img src="./img/trang-ti-16194117174325.jpg" alt="">
+                </a>
+                <button>
+                    <img src="./img/play-video.png" alt="">
+                </button>
+            </div>
+            <div class="carousel__item">
+                <a href="">
+                    <img src="./img/lat-mat-48h-16177782153424.png" alt="">
+                </a>
+                <button>
+                    <img src="./img/play-video.png" alt="">
+                </button>
+            </div>
+            <div class="carousel__item">
+                <a href="">
+                    <img src="./img/ban-tay-diet-quy-evil-expeller-16177781815781.png" alt="">
+                </a>
+                <button>
+                    <img src="./img/play-video.png" alt="">
+                </button>
+            </div>
+        </div>
     </section>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -212,7 +237,15 @@
         })
 
         // feature carousel
-
+        $('.carousel__content').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true,
+            prevArrow: "<img src='./img/back-session.png' class='slick-prev' alt=''>",
+            nextArrow: "<img src='./img/next-session.png' class='slick-next' alt=''>"
+        });
     </script>
 </body>
 
