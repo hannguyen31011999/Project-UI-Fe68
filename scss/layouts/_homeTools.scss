@@ -1,0 +1,56 @@
+.homeTools {
+  max-width: 940px;
+  margin: 0 auto;
+  height: 80px;
+  transform: translateY(-50%);
+  box-shadow: $shadow-0;
+  background-color: $bg-color;
+  border-radius: $border-radius-1;
+  .container-fluid {
+    height: 100%;
+    .row {
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 0;
+    .form-control {
+      font-size: $fs-0;
+      border: none;
+      outline: none;
+      text-transform: capitalize;
+      cursor: pointer;
+
+      &:focus {
+        box-shadow: none;
+      }
+      option {
+        background-color: $bg-color;
+        box-shadow: $shadow-1;
+      }
+    }
+  }
+  .btn {
+    &:focus {
+      box-shadow: none;
+    }
+    @include styleButton(
+      $fs-0,
+      $bg-color,
+      4px,
+      #4a4a4a,
+      transparent,
+      10px,
+      25px
+    );
+  }
+
+  // responsive
+  @include responsive("large") {
+    display: none;
+  }
+}

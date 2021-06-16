@@ -3,13 +3,18 @@ $f-color-default: #000;
 $color-a-hover: #fb4226;
 $color-p: #9b9b9b;
 $color-span: #8bc541;
+$color-op-hover: #60c5ef;
 $bg-footer: #222;
 $bg-color: #fff;
 $bg-linner: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
-$bg-detail: #0A2029;
+$bg-detail: #0a2029;
+
+// variable effect shadow
+$shadow-0: 0 0 10px rgb(0 0 0 / 30%);
+$shadow-1: 0 6px 12px rgb(0 0 0 / 18%);
 
 // variable font-size
-$fs-0: 15px; //default
+$fs-0: 14px; //default
 $fs-1: 20px;
 $fs-2: 25px;
 $fs-3: 30px;
@@ -23,8 +28,10 @@ $mg-2: 25px;
 $mg-3: 50px;
 
 //variable border-radius
-$border-radius-0: 6px;
-$border-radius-0: 12px;
+$border-radius-0: 4px;
+$border-radius-1: 5px;
+$border-radius-3: 6px;
+$border-radius-4: 12px;
 
 //variable padding
 $pd-default: 5px; //default
@@ -32,7 +39,6 @@ $pd-0: 10px;
 $pd-1: 20px;
 $pd-2: 40px;
 $pd-3: 60px;
-
 
 //variable line-height
 $line-height-0: 1.43; //default
@@ -47,11 +53,10 @@ $fw-bold-2: 600;
 $fw-bold-3: 700;
 $fw-bold: bold;
 
-
 //break points
-$breakpoints:(
-    'extra-large': 1200px,
-    'large' : 992px,
-    'medium' : 768px,
-    'small' : 576px,
-)
+$breakpoints: (
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);

@@ -1,210 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TIX - Đặt Vé Nhanh Nhất / Trang chủ</title>
     <!-- logo -->
-    <link rel="shortcut icon" href="./img/web-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/web-logo.png" type="image/x-icon" />
     <!-- Bootstrap 4.6 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
     <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <!-- Carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
     <!-- Fancybox -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
     <!-- Style -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
 
-<body>
+  <body>
     <header class="container-fluid">
-        <div class="header__content">
-            <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/web-logo.png" alt="">
-                </a>
-                <button class="navbar-toggler" id="showMenu" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <div class="header__center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Lịch chiếu
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Cụm rạp
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Tin tức
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Ứng dụng
-                                </a>
-                            </li>
-                        </div>
-                        <div class="header__right">
-                            <li class="nav-item bar">
-                                <a class="nav-link" href="#">
-                                    <img src="./img/avatar.png" alt="">
-                                    Đăng nhập
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="./img/location-header.png" alt="">
-                                    Hồ Chí Minh
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Hồ Chí Minh</a>
-                                    <a class="dropdown-item" href="#">Hà Nội</a>
-                                    <a class="dropdown-item" href="#">Hải Phòng</a>
-                                    <a class="dropdown-item" href="#">Đà nẵng</a>
-                                    <a class="dropdown-item" href="#">Biên Hòa</a>
-                                    <a class="dropdown-item" href="#">Nha Trang</a>
-                                    <a class="dropdown-item" href="#">Bình Dương</a>
-                                    <a class="dropdown-item" href="#">Phan Thiết</a>
-                                    <a class="dropdown-item" href="#">Hạ Long</a>
-                                    <a class="dropdown-item" href="#">Cần Thơ</a>
-                                </div>
-                            </li>
-                        </div>
-                    </ul>
-                </div>
-            </nav>
+      <div class="header__content">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <a class="navbar-brand" href="#">
+            <img src="./img/web-logo.png" alt="" />
+          </a>
+          <button class="navbar-toggler" id="showMenu" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <div class="header__center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Lịch chiếu </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Cụm rạp </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Tin tức </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Ứng dụng </a>
+                </li>
+              </div>
+              <div class="header__right">
+                <li class="nav-item bar">
+                  <a class="nav-link" href="#">
+                    <img src="./img/avatar.png" alt="" />
+                    Đăng nhập
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <img src="./img/location-header.png" alt="" />
+                    Hồ Chí Minh
+                  </a>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <a class="dropdown-item" href="#">Hồ Chí Minh</a>
+                    <a class="dropdown-item" href="#">Hà Nội</a>
+                    <a class="dropdown-item" href="#">Hải Phòng</a>
+                    <a class="dropdown-item" href="#">Đà nẵng</a>
+                    <a class="dropdown-item" href="#">Biên Hòa</a>
+                    <a class="dropdown-item" href="#">Nha Trang</a>
+                    <a class="dropdown-item" href="#">Bình Dương</a>
+                    <a class="dropdown-item" href="#">Phan Thiết</a>
+                    <a class="dropdown-item" href="#">Hạ Long</a>
+                    <a class="dropdown-item" href="#">Cần Thơ</a>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="header__menu">
+        <div class="header__menu--overlay"></div>
+        <div class="header__menu--content">
+          <div class="header__menu--active">
+            <img src="./img/avatar.png" alt="" />
+            <a href=""> Đăng Nhập </a>
+            <i class="fa fa-arrow-right" id="closeMenu"></i>
+          </div>
+          <ul>
+            <li>
+              <a href=""> Lịch Chiếu </a>
+            </li>
+            <li>
+              <a href=""> Cụm Rạp </a>
+            </li>
+            <li>
+              <a href=""> Tin Tức </a>
+            </li>
+            <li>
+              <a href=""> Ứng Dụng </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                id="chooseOption"
+                data-toggle="modal"
+                data-target=".bd-example-modal-lg"
+              >
+                Hồ Chí Minh
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="header__menu">
-            <div class="header__menu--overlay">
-            </div>
-            <div class="header__menu--content">
-                <div class="header__menu--active">
-                    <img src="./img/avatar.png" alt="">
-                    <a href="">
-                        Đăng Nhập
-                    </a>
-                    <i class="fa fa-arrow-right" id="closeMenu"></i>
-                </div>
-                <ul>
-                    <li>
-                        <a href="">
-                            Lịch Chiếu
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Cụm Rạp
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Tin Tức
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Ứng Dụng
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" id="chooseOption" data-toggle="modal" data-target=".bd-example-modal-lg">
-                            Hồ Chí Minh
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      </div>
+      <div
+        class="modal fade bd-example-modal-lg"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myLargeModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <ul>
+              <li>
+                <a class="active" href="#">Hồ Chí Minh</a>
+              </li>
+              <li>
+                <a href="#">Hà Nội</a>
+              </li>
+              <li>
+                <a href="#">Hải Phòng</a>
+              </li>
+              <li>
+                <a href="#">Đà nẵng</a>
+              </li>
+              <li>
+                <a href="#">Biên Hòa</a>
+              </li>
+              <li>
+                <a href="#">Nha Trang</a>
+              </li>
+              <li>
+                <a href="#">Bình Dương</a>
+              </li>
+              <li>
+                <a href="#">Phan Thiết</a>
+              </li>
+              <li>
+                <a href="#">Hạ Long</a>
+              </li>
+              <li>
+                <a href="#">Cần Thơ</a>
+              </li>
+              <li>
+                <a href="#">Vũng Tàu</a>
+              </li>
+              <li>
+                <a href="#">Huế</a>
+              </li>
+              <li>
+                <a href="#">Quy Nhơn</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <ul>
-                        <li>
-                            <a class="active" href="#">Hồ Chí Minh</a>
-                        </li>
-                        <li>
-                            <a href="#">Hà Nội</a>
-                        </li>
-                        <li>
-                            <a href="#">Hải Phòng</a>
-                        </li>
-                        <li>
-                            <a href="#">Đà nẵng</a>
-                        </li>
-                        <li>
-                            <a href="#">Biên Hòa</a>
-                        </li>
-                        <li>
-                            <a href="#">Nha Trang</a>
-                        </li>
-                        <li>
-                            <a href="#">Bình Dương</a>
-                        </li>
-                        <li>
-                            <a href="#">Phan Thiết</a>
-                        </li>
-                        <li>
-                            <a href="#">Hạ Long</a>
-                        </li>
-                        <li>
-                            <a href="#">Cần Thơ</a>
-                        </li>
-                        <li>
-                            <a href="#">Vũng Tàu</a>
-                        </li>
-                        <li>
-                            <a href="#">Huế</a>
-                        </li>
-                        <li>
-                            <a href="#">Quy Nhơn</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      </div>
     </header>
     <section class="carousel container-fluid">
-        <div class="carousel__content">
-            <div class="carousel__item">
-                <a href="">
-                    <img src="./img/trang-ti-16194117174325.jpg" alt="">
-                </a>
-                <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/l2XBzUZidig"
-                    href="javascript:;">
-                    <img src="./img/play-video.png" alt="">
-                </button>
-            </div>
-            <div class="carousel__item">
-                <a href="">
-                    <img src="./img/lat-mat-48h-16177782153424.png" alt="">
-                </a>
-                <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/kBY2k3G6LsM"
-                    href="javascript:;">
-                    <img src="./img/play-video.png" alt="">
-                </button>
-            </div>
-            <div class="carousel__item">
-                <a href="">
-                    <img src="./img/ban-tay-diet-quy-evil-expeller-16177781815781.png" alt="">
-                </a>
-                <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/uqJ9u7GSaYM"
-                    href="javascript:;">
-                    <img src="./img/play-video.png" alt="">
-                </button>
-            </div>
+      <div class="carousel__content">
+        <div class="carousel__item">
+          <a href="">
+            <img src="./img/trang-ti-16194117174325.jpg" alt="" />
+          </a>
+          <button
+            data-fancybox
+            data-type="iframe"
+            data-src="https://www.youtube.com/embed/l2XBzUZidig"
+            href="javascript:;"
+          >
+            <img src="./img/play-video.png" alt="" />
+          </button>
         </div>
+        <div class="carousel__item">
+          <a href="">
+            <img src="./img/lat-mat-48h-16177782153424.png" alt="" />
+          </a>
+          <button
+            data-fancybox
+            data-type="iframe"
+            data-src="https://www.youtube.com/embed/kBY2k3G6LsM"
+            href="javascript:;"
+          >
+            <img src="./img/play-video.png" alt="" />
+          </button>
+        </div>
+        <div class="carousel__item">
+          <a href="">
+            <img
+              src="./img/ban-tay-diet-quy-evil-expeller-16177781815781.png"
+              alt=""
+            />
+          </a>
+          <button
+            data-fancybox
+            data-type="iframe"
+            data-src="https://www.youtube.com/embed/uqJ9u7GSaYM"
+            href="javascript:;"
+          >
+            <img src="./img/play-video.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="homeTools">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 form-group">
+            <select class="form-control">
+              <option selected>Phim</option>
+              <option>Trạng Tí Phiêu Lưu Ký</option>
+              <option>Lật Mặt: 48h</option>
+              <option>Thiên Thần Hộ Mệnh - The Guardian (C18)</option>
+              <option>Detective Conan: Scarlet Bullet - Thám Tử Lừng Danh Conan: Viên Đạn Đỏ - C13</option>
+            </select>
+          </div>
+          <div class="col-lg-2 form-group">
+            <select class="form-control">
+              <option selected>Rạp</option>
+              <option>Vui lòng chọn phim</option>
+            </select>
+          </div>
+          <div class="col-lg-2 form-group">
+            <select class="form-control">
+              <option selected>Ngày xem</option>
+              <option>Vui lòng chọn phim và rạp</option>
+            </select>
+          </div>
+          <div class="col-lg-2 form-group selectSession">
+            <select class="form-control">
+              <option selected>Xuất chiếu</option>
+              <option>Vui lòng chọn phim rạp và ngày xem</option>
+            </select>
+          </div>
+          <button class="col-lg-2 btn">mua vé ngay</button>
+        </div>
+      </div>
     </section>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -216,55 +280,55 @@
     <!-- Fancybox  -->
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script>
-
-        // feature menu
-        $(document).ready(function () {
-            $('.header__menu--overlay').on('click', function (e) {
-                $('.header__menu--content').css('transform', 'translateX(100%)');
-                $('.header__menu--content').css('transition', 'all 0.3s');
-                setTimeout(function () {
-                    $('.header__menu').removeClass('show');
-                }, 300);
-                e.preventDefault();
-            });
-
-            $('#closeMenu').on('click', function (e) {
-                $('.header__menu--content').css('transform', 'translateX(100%)');
-                $('.header__menu--content').css('transition', 'all 0.3s');
-                setTimeout(function () {
-                    $('.header__menu').removeClass('show');
-                }, 300);
-                e.preventDefault();
-            })
-
-            $('#showMenu').on('click', function (e) {
-                $('.header__menu--content').css('transform', 'translateX(0)');
-                $('.header__menu').addClass('show');
-            })
-        })
-
-        // feature carousel
-        $('.carousel__content').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 2000,
-            dots: true,
-            prevArrow: "<img src='./img/back-session.png' class='slick-prev' alt=''>",
-            nextArrow: "<img src='./img/next-session.png' class='slick-next' alt=''>"
+      // feature menu
+      $(document).ready(function () {
+        $(".header__menu--overlay").on("click", function (e) {
+          $(".header__menu--content").css("transform", "translateX(100%)");
+          $(".header__menu--content").css("transition", "all 0.3s");
+          setTimeout(function () {
+            $(".header__menu").removeClass("show");
+          }, 300);
+          e.preventDefault();
         });
 
-        // play video carousel
-        $('[data-fancybox]').fancybox({
-            toolbar: false,
-            smallBtn: true,
-            iframe: {
-                preload: false
-            },
-            width: 800,
-            height: 500,
-        })
-    </script>
-</body>
+        $("#closeMenu").on("click", function (e) {
+          $(".header__menu--content").css("transform", "translateX(100%)");
+          $(".header__menu--content").css("transition", "all 0.3s");
+          setTimeout(function () {
+            $(".header__menu").removeClass("show");
+          }, 300);
+          e.preventDefault();
+        });
 
+        $("#showMenu").on("click", function (e) {
+          $(".header__menu--content").css("transform", "translateX(0)");
+          $(".header__menu").addClass("show");
+        });
+      });
+
+      // feature carousel
+      $(".carousel__content").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        dots: true,
+        prevArrow:
+          "<img src='./img/back-session.png' class='slick-prev' alt=''>",
+        nextArrow:
+          "<img src='./img/next-session.png' class='slick-next' alt=''>",
+      });
+
+      // play video carousel
+      $("[data-fancybox]").fancybox({
+        toolbar: false,
+        smallBtn: true,
+        iframe: {
+          preload: false,
+        },
+        width: 800,
+        height: 500,
+      });
+    </script>
+  </body>
 </html>
