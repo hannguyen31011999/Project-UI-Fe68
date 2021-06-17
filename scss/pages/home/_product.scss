@@ -1,4 +1,5 @@
-.films {
+.products {
+    position: relative;
     ::-webkit-scrollbar {
         width: 4px;
     }
@@ -16,13 +17,13 @@
         background: rgb(196, 193, 193);
         opacity: 0.5;
     }
-    .films__content {
+    .products__content {
         padding: 0;
-        .films__top {
+        .products__top {
             position: absolute;
-            bottom: 0;
+            top: 80%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%,-50%);
             display: flex;
             height: 80px;
             max-width: 940px;
@@ -30,7 +31,7 @@
             background-color: $bg-color;
             box-shadow: 0 0 15px rgba(168, 165, 165, 0.4);
             border-radius: 6px;
-            .films__list {
+            .products__list {
                 width: 30%;
                 cursor: pointer;
                 position: relative;
@@ -53,16 +54,14 @@
                     width: 1px;
                     background-color: rgba($color-p, 0.2);
                 }
-                .films__submenu {
+                .products__submenu {
                     position: absolute;
-                    bottom: -280px;
+                    top: 105%;
                     left: -15px;
                     width: 600px;
                     list-style: none;
-                    display: none;
                     padding-top: $pd-0;
-                }
-                .films__submenu.show {
+                    z-index: 99999999;
                     background-color: $bg-color;
                     border-radius: $border-radius-0 - 2 0 0 $border-radius-0 - 2;
                     border: 1px solid rgba(223, 218, 218 , 0.5);
@@ -86,7 +85,7 @@
                     }
                 }
             }
-            .films__item {
+            .products__item {
                 width: 17.5%;
                 cursor: pointer;
                 padding: 0 $pd-0;
@@ -111,16 +110,13 @@
             }
             .theater {
                 position: relative;
-                .films__theater--submenu {
+                .products__theater--submenu {
                     display: none;
-                }
-                .films__theater--submenu.show {
                     position: absolute;
                     bottom: -60px;
                     left: 0;
                     width: 160px;
                     list-style: none;
-                    display: block;
                     padding: $pd-0 - 5 0;
                     border-radius: $border-radius-0 - 2;
                     background-color: $bg-color;
@@ -143,16 +139,13 @@
 
             .date {
                 position: relative;
-                .films__date--submenu {
+                .products__date--submenu {
                     display: none;
-                }
-                .films__date--submenu.show {
                     position: absolute;
                     bottom: -60px;
                     left: 0;
                     width: 220px;
                     list-style: none;
-                    display: block;
                     padding: $pd-0 - 5 0;
                     border-radius: $border-radius-0 - 2;
                     background-color: $bg-color;
@@ -175,16 +168,13 @@
 
             .showtime {
                 position: relative;
-                .films__showtime--submenu {
+                .products__showtime--submenu {
                     display: none;
-                }
-                .films__showtime--submenu.show {
                     position: absolute;
                     bottom: -60px;
                     left: 0;
                     width: 280px;
                     list-style: none;
-                    display: block;
                     padding: $pd-0 - 5 0;
                     border-radius: $border-radius-0 - 2;
                     background-color: $bg-color;
@@ -204,7 +194,7 @@
                     }
                 }
             }
-            .films__btn {
+            .products__btn {
                 width: 17.5%;
                 text-align: center;
                 button {
@@ -218,9 +208,9 @@
 }
 
 @media screen and (max-width: 1365px) {
-    .films {
-        .films__content {
-            .films__top.container {
+    .products {
+        .products__content {
+            .products__top.container {
                 bottom: -12%;
             }
         }
@@ -229,25 +219,23 @@
 
 @include responsive('extra-large')
 {
-    .films {
-        .films__content {
-            .films__top.container {
+    .products {
+        .products__content {
+            .products__top.container {
                 bottom: 9%;
             }
         }
     }
 }
 
-
-
 @include responsive('large')
 {
-    .films {
-        .films__content {
-            .films__top {
+    .products {
+        .products__content {
+            .products__top {
                 display: none;
             }
         }
     }
 }
-
+  

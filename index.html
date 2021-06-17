@@ -2,681 +2,1431 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIX - Đặt Vé Nhanh Nhất / Trang chủ</title>
-    <!-- logo -->
-    <link rel="shortcut icon" href="./img/web-logo.png" type="image/x-icon">
-    <!-- Bootstrap 4.6 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <!-- Carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <!-- Fancybox -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <!-- Style -->
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TIX - Đặt Vé Nhanh Nhất / Trang chủ</title>
+  <!-- logo -->
+  <link rel="shortcut icon" href="./img/web-logo.png" type="image/x-icon" />
+  <!-- Bootstrap 4.6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!-- Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <!-- Style -->
+  <link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
-    <header class="container-fluid">
-        <div class="header__content">
-            <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/web-logo.png" alt="">
+  <header class="container-fluid">
+    <div class="header__content">
+      <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="#">
+          <img src="./img/web-logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" id="showMenu" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <div class="header__center">
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Lịch chiếu </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Cụm rạp </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Tin tức </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Ứng dụng </a>
+              </li>
+            </div>
+            <div class="header__right">
+              <li class="nav-item bar">
+                <a class="nav-link" href="#">
+                  <img src="./img/avatar.png" alt="" />
+                  Đăng nhập
                 </a>
-                <button class="navbar-toggler" id="showMenu" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <div class="header__center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Lịch chiếu
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Cụm rạp
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Tin tức
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Ứng dụng
-                                </a>
-                            </li>
-                        </div>
-                        <div class="header__right">
-                            <li class="nav-item bar">
-                                <a class="nav-link" href="#">
-                                    <img src="./img/avatar.png" alt="">
-                                    Đăng nhập
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="./img/location-header.png" alt="">
-                                    Hồ Chí Minh
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Hồ Chí Minh</a>
-                                    <a class="dropdown-item" href="#">Hà Nội</a>
-                                    <a class="dropdown-item" href="#">Hải Phòng</a>
-                                    <a class="dropdown-item" href="#">Đà nẵng</a>
-                                    <a class="dropdown-item" href="#">Biên Hòa</a>
-                                    <a class="dropdown-item" href="#">Nha Trang</a>
-                                    <a class="dropdown-item" href="#">Bình Dương</a>
-                                    <a class="dropdown-item" href="#">Phan Thiết</a>
-                                    <a class="dropdown-item" href="#">Hạ Long</a>
-                                    <a class="dropdown-item" href="#">Cần Thơ</a>
-                                </div>
-                            </li>
-                        </div>
-                    </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="./img/location-header.png" alt="" />
+                  Hồ Chí Minh
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Hồ Chí Minh</a>
+                  <a class="dropdown-item" href="#">Hà Nội</a>
+                  <a class="dropdown-item" href="#">Hải Phòng</a>
+                  <a class="dropdown-item" href="#">Đà nẵng</a>
+                  <a class="dropdown-item" href="#">Biên Hòa</a>
+                  <a class="dropdown-item" href="#">Nha Trang</a>
+                  <a class="dropdown-item" href="#">Bình Dương</a>
+                  <a class="dropdown-item" href="#">Phan Thiết</a>
+                  <a class="dropdown-item" href="#">Hạ Long</a>
+                  <a class="dropdown-item" href="#">Cần Thơ</a>
                 </div>
-            </nav>
-        </div>
-        <div class="header__menu">
-            <div class="header__menu--overlay">
+              </li>
             </div>
-            <div class="header__menu--content">
-                <div class="header__menu--active">
-                    <img src="./img/avatar.png" alt="">
-                    <a href="">
-                        Đăng Nhập
-                    </a>
-                    <i class="fa fa-arrow-right" id="closeMenu"></i>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="header__menu">
+      <div class="header__menu--overlay"></div>
+      <div class="header__menu--content">
+        <div class="header__menu--active">
+          <img src="./img/avatar.png" alt="" />
+          <a href=""> Đăng Nhập </a>
+          <i class="fa fa-arrow-right" id="closeMenu"></i>
+        </div>
+        <ul>
+          <li>
+            <a href=""> Lịch Chiếu </a>
+          </li>
+          <li>
+            <a href=""> Cụm Rạp </a>
+          </li>
+          <li>
+            <a href=""> Tin Tức </a>
+          </li>
+          <li>
+            <a href=""> Ứng Dụng </a>
+          </li>
+          <li>
+            <a href="#" id="chooseOption" data-toggle="modal" data-target=".bd-example-modal-lg">
+              Hồ Chí Minh
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <ul>
+            <li>
+              <a class="active" href="#">Hồ Chí Minh</a>
+            </li>
+            <li>
+              <a href="#">Hà Nội</a>
+            </li>
+            <li>
+              <a href="#">Hải Phòng</a>
+            </li>
+            <li>
+              <a href="#">Đà nẵng</a>
+            </li>
+            <li>
+              <a href="#">Biên Hòa</a>
+            </li>
+            <li>
+              <a href="#">Nha Trang</a>
+            </li>
+            <li>
+              <a href="#">Bình Dương</a>
+            </li>
+            <li>
+              <a href="#">Phan Thiết</a>
+            </li>
+            <li>
+              <a href="#">Hạ Long</a>
+            </li>
+            <li>
+              <a href="#">Cần Thơ</a>
+            </li>
+            <li>
+              <a href="#">Vũng Tàu</a>
+            </li>
+            <li>
+              <a href="#">Huế</a>
+            </li>
+            <li>
+              <a href="#">Quy Nhơn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="carousel container-fluid">
+    <div class="carousel__content">
+      <div class="carousel__item">
+        <a href="">
+          <img src="./img/trang-ti-16194117174325.jpg" alt="" />
+        </a>
+        <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/l2XBzUZidig"
+          href="javascript:;">
+          <img src="./img/play-video.png" alt="" />
+        </button>
+      </div>
+      <div class="carousel__item">
+        <a href="">
+          <img src="./img/lat-mat-48h-16177782153424.png" alt="" />
+        </a>
+        <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/kBY2k3G6LsM"
+          href="javascript:;">
+          <img src="./img/play-video.png" alt="" />
+        </button>
+      </div>
+      <div class="carousel__item">
+        <a href="">
+          <img src="./img/ban-tay-diet-quy-evil-expeller-16177781815781.png" alt="" />
+        </a>
+        <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/uqJ9u7GSaYM"
+          href="javascript:;">
+          <img src="./img/play-video.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="products">
+    <div class="products__content">
+      <div class="products__top container">
+        <div class="products__list">
+          <span class="chooseFilm">Phim</span>
+          <i class="fa fa-angle-down"></i>
+          <ul class="products__submenu">
+            <li>
+              <a href="#">Trạng Tí Phiêu Lưu Ký</a>
+            </li>
+            <li>
+              <a href="#">Lật Mặt: 48h</a>
+            </li>
+            <li>
+              <a href="#">Thiên Thần Hộ Mệnh - The Guardian (C18)</a>
+            </li>
+            <li>
+              <a href="#">Detective Conan: Scarlet Bullet - Thám Tử Lừng Danh Conan: Viên Đạn Đỏ - C13</a>
+            </li>
+            <li>
+              <a href="#">Người Nhân Bản - Seobok (C16)</a>
+            </li>
+            <li>
+              <a href="#">Bàn Tay Diệt Quỷ - Evil Expeller (C16)</a>
+            </li>
+            <li>
+              <a href="#">Kẻ Vô Danh - Nobody - C18</a>
+            </li>
+            <li>
+              <a href="#">Hùng Thần Trắng - Great White - C18</a>
+            </li>
+            <li>
+              <a href="#">Chiến Binh Cuối Cùng: Cuội Nguồn Của Quỷ - The Last Warrior: Root Of Evil -
+                C13</a>
+            </li>
+            <li>
+              <a href="#">Ong Nhí Phiêu Lưu Ký: Giải Cứu Công Chúa Kiến - Maya The Bee 3: The Golden Orb -
+                P</a>
+            </li>
+            <li>
+              <a href="#">Nhân Đôi Tình Yêu - Double Party - C13</a>
+            </li>
+            <li>
+              <a href="#">Trùm Cuối Siêu Đẳng - Boss Level - C18</a>
+            </li>
+            <li>
+              <a href="#">The Hypnosis - Con Lắc Tà Thuật - C18</a>
+            </li>
+            <li>
+              <a href="#">Godzilla vs. Kong</a>
+            </li>
+          </ul>
+        </div>
+        <div class="products__item theater">
+          <span class="chooseItem">Rạp</span>
+          <i class="fa fa-angle-down"></i>
+          <ul class="products__theater--submenu">
+            <li>
+              <a href="#">Vui lòng chọn phim</a>
+            </li>
+          </ul>
+        </div>
+        <div class="products__item date">
+          <span class="chooseItem">Ngày xem</span>
+          <i class="fa fa-angle-down"></i>
+          <ul class="products__date--submenu">
+            <li>
+              <a href="#">Vui lòng chọn phim và rạp</a>
+            </li>
+          </ul>
+        </div>
+        <div class="products__item showtime">
+          <span class="chooseItem">Suất chiếu</span>
+          <i class="fa fa-angle-down"></i>
+          <ul class="products__showtime--submenu">
+            <li>
+              <a href="#">Vui lòng chọn phim, rạp và ngày xem</a>
+            </li>
+          </ul>
+        </div>
+        <div class="products__btn">
+          <button type="button" class="btn btn-dark">mua vé ngay</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="films container">
+    <nav>
+      <div class="nav nav-tabs navCenter align-items-center justify-content-center">
+        <a class="nav-link active" data-toggle="tab" href="#nav-home">Đang chiếu</a>
+        <a class="nav-link" data-toggle="tab" href="#nav-profile">Sắp chiếu</a>
+      </div>
+    </nav>
+    <div class="tab-content">
+      <div class="tab-pane active" id="nav-home">
+        <div class="carousel slide" id="slide-connect" data-interval="false" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
                 </div>
-                <ul>
-                    <li>
-                        <a href="">
-                            Lịch Chiếu
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Cụm Rạp
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Tin Tức
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Ứng Dụng
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" id="chooseOption" data-toggle="modal" data-target=".bd-example-modal-lg">
-                            Hồ Chí Minh
-                        </a>
-                    </li>
-                </ul>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-button">
+            <a class="carousel-control-prev" href="#slide-connect" data-slide="prev">
+              <img src="./img/back-session.png" class="carousel-control-prev-icon" alt="" />
+            </a>
+            <a class="carousel-control-next" href="#slide-connect" data-slide="next">
+              <img src="./img/next-session.png" class="carousel-control-next-icon" alt="" />
+            </a>
+          </div>
         </div>
-        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
+      </div>
+      <div class="tab-pane" id="nav-profile">
+        <div class="carousel slide" id="slide-connect1" data-interval="false" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 films__item">
+                  <div class="films__thumbnail">
+                    <div class="films__point">
+                      <p>6.3</p>
+                      <p>
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.png" alt="" />
+                        <img src="./img/star1.2.png" alt="" />
+                      </p>
+                    </div>
+                    <div class="films__overlay">
+                      <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/sx1ROHCmY-4"
+                        href="javascript:;">
+                        <img src="./img/play-video.png" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="films__info">
+                    <p>
+                      <span class="films__laber--red">P</span> Trạng tí phiêu lưu
+                      ký
+                    </p>
+                    <span class="films__time">100 phút</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-button">
+            <a class="carousel-control-prev" href="#slide-connect1" data-slide="prev">
+              <img src="./img/back-session.png" class="carousel-control-prev-icon" alt="" />
+            </a>
+            <a class="carousel-control-next" href="#slide-connect1" data-slide="next">
+              <img src="./img/next-session.png" class="carousel-control-next-icon" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="complex">
+    <div class="complex__content container">
+      <div class="row">
+        <div class="col-md-1 complex__left">
+          <ul class="complex__list--producer">
+            <li class="active">
+              <a href="">
+                <img src="./img/bhd.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/cinestar.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/bt.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/dongdacinema.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/megags.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/dcine.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./img/galaxycine.png" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 complex__center">
+          <ul class="complex__list--products">
+            <li class="active">
+              <div class="complex__image">
+                <img src="./img/bhd-star-bitexco-16105952137769.png" alt="">
+              </div>
+              <div class="complex__info mr-auto">
+                <p><span>BHD Star</span> - Bitexco</p>
+                <span>L3-Bitexco Icon 68, 2 Hải Triều, Q.1</span>
+                <h5><a href="#">[chi tiết]</a></h5>
+              </div>
+            </li>
+            <li>
+              <div class="complex__image">
+                <img src="./img/bhd-star-vincom-thao-dien-16105955634183.png" alt="">
+              </div>
+              <div class="complex__info mr-auto">
+                <p><span>BHD Star</span> - Vincom Thảo Điền</p>
+                <span>L5-Megamall, 159 XL Hà Nội, Q.2</span>
+                <h5><a href="#">[chi tiết]</a></h5>
+              </div>
+            </li>
+            <li>
+              <div class="complex__image">
+                <img src="./img/bhd-star-vincom-3-2-16105957596860.png" alt="">
+              </div>
+              <div class="complex__info mr-auto">
+                <p><span>BHD Star</span> - Vincom 3/2</p>
+                <span>L5-Vincom 3/2, 3C Đường 3/2, Q.10</span>
+                <h5><a href="#">[chi tiết]</a></h5>
+              </div>
+            </li>
+            <li>
+              <div class="complex__image">
+                <img src="./img/bhd-star-pham-hung-16105959230642.png" alt="">
+              </div>
+              <div class="complex__info mr-auto">
+                <p><span>BHD Star</span> - Phạm Hùng</p>
+                <span>L4-Satra Phạm Hùng, C6/27 Phạm Hùng, Bình Chánh</span>
+                <h5><a href="#">[chi tiết]</a></h5>
+              </div>
+            </li>
+            <li>
+              <div class="complex__image">
+                <img src="./img/bhd-star-vincom-quang-trung-16105960645760.png" alt="">
+              </div>
+              <div class="complex__info mr-auto">
+                <p><span>BHD Star</span> - Quang Trung</p>
+                <span>B1-Vincom QT, 190 Quang Trung, Gò Vấp</span>
+                <h5><a href="#">[chi tiết]</a></h5>
+              </div>
+            </li>
+            <li>
+              <div class="complex__image">
+                <img src="./img/bhd-star-vincom-le-van-viet-16105962051265.png" alt="">
+              </div>
+              <div class="complex__info mr-auto">
+                <p><span>BHD Star</span> - Lê Văn Việt</p>
+                <span>L4-Vincom Plaza, 50 Lê Văn Việt, Q.9</span>
+                <h5><a href="#">[chi tiết]</a></h5>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-7 complex__right">
+          <p>Không có suất chiếu</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer__content">
+      <div class="container">
+
+
+        <div class="footer__bottom">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-12 tix__guidelines">
+              <h5 class="title">TIX</h5>
+              <div class="row tix__guidelines--detail">
+                <div class="col-6 reponsive">
+                  <ul>
+                    <li>
+                      <a class="" href="#">FQA</a>
+                    </li>
+                    <li>
+                      <a class="" href="#">Brand Guideline</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6 col-12 document">
+                  <div class="">
                     <ul>
-                        <li>
-                            <a class="active" href="#">Hồ Chí Minh</a>
-                        </li>
-                        <li>
-                            <a href="#">Hà Nội</a>
-                        </li>
-                        <li>
-                            <a href="#">Hải Phòng</a>
-                        </li>
-                        <li>
-                            <a href="#">Đà nẵng</a>
-                        </li>
-                        <li>
-                            <a href="#">Biên Hòa</a>
-                        </li>
-                        <li>
-                            <a href="#">Nha Trang</a>
-                        </li>
-                        <li>
-                            <a href="#">Bình Dương</a>
-                        </li>
-                        <li>
-                            <a href="#">Phan Thiết</a>
-                        </li>
-                        <li>
-                            <a href="#">Hạ Long</a>
-                        </li>
-                        <li>
-                            <a href="#">Cần Thơ</a>
-                        </li>
-                        <li>
-                            <a href="#">Vũng Tàu</a>
-                        </li>
-                        <li>
-                            <a href="#">Huế</a>
-                        </li>
-                        <li>
-                            <a href="#">Quy Nhơn</a>
-                        </li>
+                      <li>
+                        <a href="#">Thỏa thuận sử dụng</a>
+                      </li>
                     </ul>
+                    <ul>
+
+                      <li>
+                        <a href="#">Chính sách bảo mật</a>
+                      </li>
+                    </ul>
+                  </div>
+
+
                 </div>
+              </div>
             </div>
+            <div class="col-md-4 tix__partner">
+              <h5 class="title">Đối tác</h5>
+              <div class="row tix__partner--detail">
+                <div class="col-sm-12 tix__partner--detail-logo">
+                  <a href="#">
+                    <img style="background-color: white;" class="img__brand"
+                      src="	https://tix.vn/app/assets/img/icons/cgv.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/galaxycine.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/cinestar.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-12 tix__partner--detail-logo">
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-12 tix__partner--detail-logo">
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-12 tix__partner--detail-logo">
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-12 tix__partner--detail-logo">
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt=""></a>
+                  <a href="#">
+                    <img class="img__brand" src="./img/bhd.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 tix__social">
+              <div class="row">
+                <div class="col-12 tix__social--reponsive">
+                  <h5 class="title">Mobile app</h5>
+                  <div class="col-12 mobile__app">
+                    <img src="./img/android-logo.png" alt="">
+                    <img src="./img/apple-logo.png" alt="">
+                  </div>
+                </div>
+                <div class="col-12 social">
+                  <h5 class="title">Social</h5>
+                  <div class="col-12 social__app">
+                    <img src="./img/facebook-logo.png" alt="">
+                    <img src="./img/zalo-logo.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
-    <section class="carousel container-fluid">
-        <div class="carousel__content">
-            <div class="carousel__item">
-                <a href="">
-                    <img src="./img/trang-ti-16194117174325.jpg" alt="">
-                </a>
-                <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/l2XBzUZidig"
-                    href="javascript:;">
-                    <img src="./img/play-video.png" alt="">
-                </button>
-            </div>
-            <div class="carousel__item">
-                <a href="">
-                    <img src="./img/lat-mat-48h-16177782153424.png" alt="">
-                </a>
-                <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/kBY2k3G6LsM"
-                    href="javascript:;">
-                    <img src="./img/play-video.png" alt="">
-                </button>
-            </div>
-            <div class="carousel__item">
-                <a href="">
-                    <img src="./img/ban-tay-diet-quy-evil-expeller-16177781815781.png" alt="">
-                </a>
-                <button data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/uqJ9u7GSaYM"
-                    href="javascript:;">
-                    <img src="./img/play-video.png" alt="">
-                </button>
-            </div>
+        <hr>
+      </div>
+    </div>
+
+    <div class="footer__end">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-2 col-sm-12 footer__end--img">
+            <img src="./img/zion-logo.jpg" alt="">
+          </div>
+          <div class="col-md-8 col-sm-12 m-l-30 footer__fonts">
+            <span>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span><br>
+            <span> Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt
+              Nam.</span><br>
+            <span> Giấy chứng nhận đăng ký kinh doanh số: 0101659783,</span><br>
+            <span> đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế hoạch và đầu tư Thành phố
+              Hồ Chí Minh cấp.</span><br>
+            <span> Số Điện Thoại (Hotline): 1900 545 436</span>
+            <br>Email:
+            <a style="color:red" ;> support@tix.vn</a>
+
+          </div>
+          <div class="col-md-2 col-sm-12  footer__end--img">
+            <img src="./img/zion-logo.jpg" alt="">
+          </div>
         </div>
-    </section>
-    <section class="films">
-        <div class="films__content">
-            <div class="films__top container">
-                <div class="films__list">
-                    <span class="chooseFilm">Phim</span>
-                    <i class="fa fa-angle-down"></i>
-                    <ul class="films__submenu">
-                        <li>
-                            <a href="#">Trạng Tí Phiêu Lưu Ký</a>
-                        </li>
-                        <li>
-                            <a href="#">Lật Mặt: 48h</a>
-                        </li>
-                        <li>
-                            <a href="#">Thiên Thần Hộ Mệnh - The Guardian (C18)</a>
-                        </li>
-                        <li>
-                            <a href="#">Detective Conan: Scarlet Bullet - Thám Tử Lừng Danh Conan: Viên Đạn Đỏ - C13</a>
-                        </li>
-                        <li>
-                            <a href="#">Người Nhân Bản - Seobok (C16)</a>
-                        </li>
-                        <li>
-                            <a href="#">Bàn Tay Diệt Quỷ - Evil Expeller (C16)</a>
-                        </li>
-                        <li>
-                            <a href="#">Kẻ Vô Danh - Nobody - C18</a>
-                        </li>
-                        <li>
-                            <a href="#">Hùng Thần Trắng - Great White - C18</a>
-                        </li>
-                        <li>
-                            <a href="#">Chiến Binh Cuối Cùng: Cuội Nguồn Của Quỷ - The Last Warrior: Root Of Evil -
-                                C13</a>
-                        </li>
-                        <li>
-                            <a href="#">Ong Nhí Phiêu Lưu Ký: Giải Cứu Công Chúa Kiến - Maya The Bee 3: The Golden Orb -
-                                P</a>
-                        </li>
-                        <li>
-                            <a href="#">Nhân Đôi Tình Yêu - Double Party - C13</a>
-                        </li>
-                        <li>
-                            <a href="#">Trùm Cuối Siêu Đẳng - Boss Level - C18</a>
-                        </li>
-                        <li>
-                            <a href="#">The Hypnosis - Con Lắc Tà Thuật - C18</a>
-                        </li>
-                        <li>
-                            <a href="#">Godzilla vs. Kong</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="films__item theater">
-                    <span class="chooseItem">Rạp</span>
-                    <i class="fa fa-angle-down"></i>
-                    <ul class="films__theater--submenu">
-                        <li>
-                            <a href="#">Vui lòng chọn phim</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="films__item date">
-                    <span class="chooseItem">Ngày xem</span>
-                    <i class="fa fa-angle-down"></i>
-                    <ul class="films__date--submenu">
-                        <li>
-                            <a href="#">Vui lòng chọn phim và rạp</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="films__item showtime">
-                    <span class="chooseItem">Suất chiếu</span>
-                    <i class="fa fa-angle-down"></i>
-                    <ul class="films__showtime--submenu">
-                        <li>
-                            <a href="#">Vui lòng chọn phim, rạp và ngày xem</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="films__btn">
-                    <button type="button" class="btn btn-dark">mua vé ngay</button>
-                </div>
-            </div>
-            <div class="films__bot">
-            </div>
-        </div>
-    </section>
-    <section class="complex">
-        <div class="complex__content container">
-            <div class="row">
-                <div class="col-md-1 complex__left">
-                    <ul class="complex__list--producer">
-                        <li class="active">
-                            <a href="">
-                                <img src="./img/bhd.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/cinestar.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/bt.jpg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/dongdacinema.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/megags.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/dcine.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/galaxycine.png" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 complex__center">
-                    <ul class="complex__list--products">
-                        <li class="active">
-                            <div class="complex__image">
-                                <img src="./img/bhd-star-bitexco-16105952137769.png" alt="">
-                            </div>
-                            <div class="complex__info mr-auto">
-                                <p><span>BHD Star</span> - Bitexco</p>
-                                <span>L3-Bitexco Icon 68, 2 Hải Triều, Q.1</span>
-                                <h5><a href="#">[chi tiết]</a></h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="complex__image">
-                                <img src="./img/bhd-star-vincom-thao-dien-16105955634183.png" alt="">
-                            </div>
-                            <div class="complex__info mr-auto">
-                                <p><span>BHD Star</span> - Vincom Thảo Điền</p>
-                                <span>L5-Megamall, 159 XL Hà Nội, Q.2</span>
-                                <h5><a href="#">[chi tiết]</a></h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="complex__image">
-                                <img src="./img/bhd-star-vincom-3-2-16105957596860.png" alt="">
-                            </div>
-                            <div class="complex__info mr-auto">
-                                <p><span>BHD Star</span> - Vincom 3/2</p>
-                                <span>L5-Vincom 3/2, 3C Đường 3/2, Q.10</span>
-                                <h5><a href="#">[chi tiết]</a></h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="complex__image">
-                                <img src="./img/bhd-star-pham-hung-16105959230642.png" alt="">
-                            </div>
-                            <div class="complex__info mr-auto">
-                                <p><span>BHD Star</span> - Phạm Hùng</p>
-                                <span>L4-Satra Phạm Hùng, C6/27 Phạm Hùng, Bình Chánh</span>
-                                <h5><a href="#">[chi tiết]</a></h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="complex__image">
-                                <img src="./img/bhd-star-vincom-quang-trung-16105960645760.png" alt="">
-                            </div>
-                            <div class="complex__info mr-auto">
-                                <p><span>BHD Star</span> - Quang Trung</p>
-                                <span>B1-Vincom QT, 190 Quang Trung, Gò Vấp</span>
-                                <h5><a href="#">[chi tiết]</a></h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="complex__image">
-                                <img src="./img/bhd-star-vincom-le-van-viet-16105962051265.png" alt="">
-                            </div>
-                            <div class="complex__info mr-auto">
-                                <p><span>BHD Star</span> - Lê Văn Việt</p>
-                                <span>L4-Vincom Plaza, 50 Lê Văn Việt, Q.9</span>
-                                <h5><a href="#">[chi tiết]</a></h5>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-7 complex__right">
-                    <p>Không có suất chiếu</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </footer>
 
 
 
+  <!-- END FOOTER -->
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap 4.6 -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <!-- Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <!-- Fancybox  -->
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script>
+    // feature menu
+    $(document).ready(function () {
+      $(".header__menu--overlay").on("click", function (e) {
+        $(".header__menu--content").css("transform", "translateX(100%)");
+        $(".header__menu--content").css("transition", "all 0.3s");
+        setTimeout(function () {
+          $(".header__menu").removeClass("show");
+        }, 300);
+        e.preventDefault();
+      });
+    });
 
+    $("#showMenu").on("click", function (e) {
+      $(".header__menu--content").css("transform", "translateX(0)");
+      $(".header__menu").addClass("show");
+    });
 
+    $("#closeMenu").on("click", function (e) {
+      $(".header__menu--content").css("transform", "translateX(100%)");
+      $(".header__menu--content").css("transition", "all 0.3s");
+      setTimeout(function () {
+        $(".header__menu").removeClass("show");
+      }, 300);
+      e.preventDefault();
+    });
 
+    // feature carousel
+    $('.carousel__content').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true,
+      prevArrow: "<img src='./img/back-session.png' class='slick-prev' alt=''>",
+      nextArrow: "<img src='./img/next-session.png' class='slick-next' alt=''>"
+    });
 
+    // play video carousel
+    $('[data-fancybox]').fancybox({
+      toolbar: false,
+      smallBtn: true,
+      iframe: {
+        preload: false
+      },
+      width: 800,
+      height: 500,
+    })
 
-    <!-- FOOTER -->
-
-
-    <footer>
-        <div class="footer__content">
-            <div class="container">
-
-
-                <div class="footer__bottom">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-12 tix__guidelines">
-                            <h5 class="title">TIX</h5>
-                            <div class="row tix__guidelines--detail">
-                                <div class="col-6 reponsive">
-                                    <ul>
-                                        <li>
-                                            <a class="" href="#">FQA</a>
-                                        </li>
-                                        <li>
-                                            <a class="" href="#">Brand Guideline</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6 col-12 document">
-                                    <div class="">
-                                        <ul>
-                                            <li>
-                                                <a href="#">Thỏa thuận sử dụng</a>
-                                            </li>
-                                        </ul>
-                                        <ul>
-
-                                            <li>
-                                                <a href="#">Chính sách bảo mật</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 tix__partner">
-                            <h5 class="title">Đối tác</h5>
-                            <div class="row tix__partner--detail">
-                                <div class="col-sm-12 tix__partner--detail-logo">
-                                    <a href="#">
-                                        <img style="background-color: white;" class="img__brand"
-                                            src="	https://tix.vn/app/assets/img/icons/cgv.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/galaxycine.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/cinestar.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-sm-12 tix__partner--detail-logo">
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-sm-12 tix__partner--detail-logo">
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-sm-12 tix__partner--detail-logo">
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-sm-12 tix__partner--detail-logo">
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt=""></a>
-                                    <a href="#">
-                                        <img class="img__brand" src="./img/bhd.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 tix__social">
-                            <div class="row">
-                                <div class="col-12 tix__social--reponsive">
-                                    <h5 class="title">Mobile app</h5>
-                                    <div class="col-12 mobile__app">
-                                        <img src="./img/android-logo.png" alt="">
-                                        <img src="./img/apple-logo.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-12 social">
-                                    <h5 class="title">Social</h5>
-                                    <div class="col-12 social__app">
-                                        <img src="./img/facebook-logo.png" alt="">
-                                        <img src="./img/zalo-logo.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <div class="footer__end">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-2 col-sm-12 footer__end--img">
-                        <img src="./img/zion-logo.jpg" alt="">
-                    </div>
-                    <div class="col-md-8 col-sm-12 m-l-30 footer__fonts">
-                        <span>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span><br>
-                        <span> Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt
-                            Nam.</span><br>
-                        <span> Giấy chứng nhận đăng ký kinh doanh số: 0101659783,</span><br>
-                        <span> đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế hoạch và đầu tư Thành phố
-                            Hồ Chí Minh cấp.</span><br>
-                        <span> Số Điện Thoại (Hotline): 1900 545 436</span>
-                        <br>Email:
-                        <a style="color:red" ;> support@tix.vn</a>
-
-                    </div>
-                    <div class="col-md-2 col-sm-12  footer__end--img">
-                        <img src="./img/zion-logo.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-
-    <!-- END FOOTER -->
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap 4.6 -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-    <!-- Carousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <!-- Fancybox  -->
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script>
-
-        // feature menu
-        $(document).ready(function () {
-            $('.header__menu--overlay').on('click', function (e) {
-                $('.header__menu--content').css('transform', 'translateX(100%)');
-                $('.header__menu--content').css('transition', 'all 0.3s');
-                setTimeout(function () {
-                    $('.header__menu').removeClass('show');
-                }, 300);
-                e.preventDefault();
-            });
-
-            $('#closeMenu').on('click', function (e) {
-                $('.header__menu--content').css('transform', 'translateX(100%)');
-                $('.header__menu--content').css('transition', 'all 0.3s');
-                setTimeout(function () {
-                    $('.header__menu').removeClass('show');
-                }, 300);
-                e.preventDefault();
-            })
-
-            $('#showMenu').on('click', function (e) {
-                $('.header__menu--content').css('transform', 'translateX(0)');
-                $('.header__menu').addClass('show');
-            })
-        })
-
-        // feature carousel
-        $('.carousel__content').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            dots: true,
-            prevArrow: "<img src='./img/back-session.png' class='slick-prev' alt=''>",
-            nextArrow: "<img src='./img/next-session.png' class='slick-next' alt=''>"
-        });
-
-        // play video carousel
-        $('[data-fancybox]').fancybox({
-            toolbar: false,
-            smallBtn: true,
-            iframe: {
-                preload: false
-            },
-            width: 800,
-            height: 500,
-        })
-
-        // product show menu
-        $(document).ready(function () {
-            $('.films__list').on('click', function (e) {
-                $('.films__submenu').toggle().addClass('show');
-            });
-            $('.theater').on('click', function (e) {
-                $('.films__theater--submenu').toggle().addClass('show');
-            });
-            $('.date').on('click', function (e) {
-                $('.films__date--submenu').toggle().addClass('show');
-            });
-            $('.showtime').on('click', function (e) {
-                $('.films__showtime--submenu').toggle().addClass('show');
-            });
-        })
-        $(document).mouseup(function (e) {
-            let products = $(".films__list");
-            let theater = $(".theater");
-            let date = $(".date");
-            let showTime = $(".showtime");
-            if (!products.is(e.target) && products.has(e.target).length === 0) {
-                $('.films__submenu').removeClass('show');
-                $('.films__submenu').css('display', 'none');
-            }
-            if (!theater.is(e.target) && theater.has(e.target).length === 0) {
-                $('.films__theater--submenu').removeClass('show');
-                $('.films__theater--submenu').css('display', 'none');
-            }
-            if (!date.is(e.target) && date.has(e.target).length === 0) {
-                $('.films__date--submenu').removeClass('show');
-                $('.films__date--submenu').css('display', 'none');
-            }
-            if (!showTime.is(e.target) && showTime.has(e.target).length === 0) {
-                $('.films__showtime--submenu').removeClass('show');
-                $('.films__showtime--submenu').css('display', 'none');
-            }
-        });
-    </script>
+    // product show menu
+    $(document).ready(function () {
+      $('.products__list').on('click', function (e) {
+        $('.products__submenu').toggle();
+      });
+      $('.theater').on('click', function (e) {
+        $('.products__theater--submenu').toggle();
+      });
+      $('.date').on('click', function (e) {
+        $('.products__date--submenu').toggle();
+      });
+      $('.showtime').on('click', function (e) {
+        $('.products__showtime--submenu').toggle();
+      });
+    })
+    $(document).mouseup(function (e) {
+      let products = $(".products__list");
+      let theater = $(".theater");
+      let date = $(".date");
+      let showTime = $(".showtime");
+      if (!products.is(e.target) && products.has(e.target).length === 0) {
+        $('.products__submenu').removeClass('show');
+        $('.products__submenu').css('display', 'none');
+      }
+      if (!theater.is(e.target) && theater.has(e.target).length === 0) {
+        $('.products__theater--submenu').removeClass('show');
+        $('.products__theater--submenu').css('display', 'none');
+      }
+      if (!date.is(e.target) && date.has(e.target).length === 0) {
+        $('.products__date--submenu').removeClass('show');
+        $('.products__date--submenu').css('display', 'none');
+      }
+      if (!showTime.is(e.target) && showTime.has(e.target).length === 0) {
+        $('.products__showtime--submenu').removeClass('show');
+        $('.products__showtime--submenu').css('display', 'none');
+      }
+    });
+  </script>
 </body>
 
 </html>

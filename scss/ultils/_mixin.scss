@@ -17,3 +17,13 @@
     margin: $mg-y $mg-x;
     font-weight: $fw;
 }
+
+@mixin styleButton($fsize, $color, $rounded, $bgColor, $bColor, $py, $px) {
+    font-size: $fsize;
+    color: $color;
+    border-radius: $rounded;
+    background-color: $bgColor;
+    border: 1px solid $bColor;
+    text-transform: uppercase;
+    padding: $py $px;
+}
