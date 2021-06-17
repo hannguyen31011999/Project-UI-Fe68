@@ -1,0 +1,30 @@
+.blog {
+    padding-top: $pd-3 + 30;
+    background-image: url('../../../img/back-news.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .blog__content {
+        max-width: 940px;
+        padding: 0;
+        .nav-tabs {
+            border: none;
+            .nav-item {
+                border: none;
+                @include styleText($fs-1 - 2 , $f-color-default , 0 , 0 , $fw-normal);
+                transform: scale(1);
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+            .active {
+                font-size: $fs-1 + 2;
+                color: $color-a-hover;
+                font-weight: normal;
+                background-color: rgba($bg-color,0.1);
+                &:hover {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
