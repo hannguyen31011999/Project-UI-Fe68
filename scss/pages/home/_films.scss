@@ -1,0 +1,15 @@
+.film__item {
+  padding: 20px 10px 0;
+  margin-bottom: 25px;
+  .film__thumbnail {
+    position: relative;
+    background-image: url('../img/trang-ti-16194120693380_215x318.jpg');
+    background-position: center, 0 0;
+    background-size: 100% auto;
+    background-repeat: no-repeat, repeat-y;
+    margin-bottom: 10px;
+    padding-top: 112%;
+    cursor: pointer;
+    border-radius: $border-radius-0;
+  }
+}
