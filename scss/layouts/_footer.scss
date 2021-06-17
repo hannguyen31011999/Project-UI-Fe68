@@ -1,0 +1,131 @@
+
+
+
+
+ 
+
+            
+
+footer{
+    background-color: rgb(46, 46, 46);
+    color: white;
+    .footer__content{
+      .footer__bottom{
+        .tix__guidelines{
+          .tix__guidelines--detail{
+            ul{
+              li{
+                list-style-type: none;
+                a{
+                  text-decoration: none;
+                  color:$bg-color;
+                }
+              }
+            }
+          }
+        }
+        .tix__partner{
+          .tix__partner--detail{
+            .tix__partner--detail-logo{
+              a{
+                img{
+                 
+                  width: 30px;
+                  height: 30px;
+                  margin-right: $mg-1;
+                  margin-bottom: $mg-0;
+                }
+              }
+            }
+          }
+        }
+        .tix__social{
+          .mobile__app, .social__app{
+            img{
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+      hr{
+        border-top: 1px solid $bg-color;
+      }
+    }
+   
+  }
+  
+  .footer__end
+   {
+      .footer__end--img{
+       
+        img{
+          width:70%;
+           border-radius: 10px;
+         }
+      
+      }
+      .footer__fonts
+      {
+        span{
+          font-size:$fs-0;
+          color:rgba(255, 255, 255, 0.123)
+        }
+      }
+   }
+   @include responsive("large"){
+     footer{
+       .footer__content{
+         .footer__bottom{
+           .tix__guidelines{
+             text-align: center;
+             .title{
+               display: none!important;
+             }
+             .tix__guidelines--detail{
+               .reponsive{
+                 display: none!important;
+               }
+             }
+           }
+           .tix__partner{
+             display: none!important;
+           }
+           .tix__social{
+             text-align: center;
+             .tix__social--reponsive{
+               display: none!important;
+               
+             }
+             .social{
+               .title{
+                 display: none!important;
+               }
+             }
+           }
+         }
+       }
+      .footer__end{
+        .footer__end--img{
+          img{
+            width: 100%!important;
+            
+          }
+        }
+      }
+     }
+   }
+   @include responsive("medium"){
+    footer{
+     .footer__end{
+       .footer__end--img{
+        text-align: center!important;
+         img{
+           width: 20%!important;
+           
+         }
+       }
+     }
+    }
+  }
+  
