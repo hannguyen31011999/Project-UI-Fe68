@@ -1,131 +1,165 @@
+footer {
+  padding-top: $pd-2;
+  background-color: $bg-footer;
+  .footer__content {
+    .footer__bottom {
+      .tix__guidelines {
+        h5 {
+          font-size: 13px;
+          color: $bg-color;
+        }
+        .tix__guidelines--detail {
+          ul {
+            li {
+              list-style-type: none;
+              a {
+                font-size: 13px;
+                text-decoration: none;
+                color: white;
 
-
-
-
- 
-
-            
-
-footer{
-    background-color: rgb(46, 46, 46);
-    color: white;
-    .footer__content{
-      .footer__bottom{
-        .tix__guidelines{
-          .tix__guidelines--detail{
-            ul{
-              li{
-                list-style-type: none;
-                a{
-                  text-decoration: none;
-                  color:$bg-color;
+                &:hover {
+                  color: rgba(196, 195, 195, 0.5);
                 }
               }
             }
           }
         }
-        .tix__partner{
-          .tix__partner--detail{
-            .tix__partner--detail-logo{
-              a{
-                img{
-                 
-                  width: 30px;
-                  height: 30px;
-                  margin-right: $mg-1;
-                  margin-bottom: $mg-0;
-                }
-              }
+      }
+    }
+  }
+  .tix__partner {
+    h5 {
+      color: $bg-color;
+      font-size: 13px;
+    }
+    .tix__partner--detail {
+      .tix__partner--detail-logo {
+        a {
+          img {
+            width: 30px;
+            height: 30px;
+            margin-right: $mg-1;
+            margin-bottom: $mg-0;
+            &:hover {
+              opacity: 0.6;
             }
           }
         }
-        .tix__social{
-          .mobile__app, .social__app{
-            img{
-              width: 40px;
-              height: 40px;
+      }
+    }
+  }
+  .tix__social {
+    .tix__social--reponsive {
+      h5 {
+        color: $bg-color;
+        text-transform: uppercase;
+        font-size: ($fs-0)-2;
+      }
+      .left {
+        margin-right: 20px;
+      }
+    }
+
+    .tix__social--reponsive1 {
+      .title {
+        margin-left: 30px;
+        color: $bg-color;
+        margin-bottom: $mg-1;
+        text-transform: uppercase;
+        font-size: ($fs-0)-2;
+      }
+    }
+    .mobile__app,
+    .social__app {
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+  hr {
+    margin-bottom: $mg-2;
+    border-top: 1px solid rgba(255, 255, 255, 0.274);
+  }
+}
+.footer__end {
+  .footer__end--img {
+    img {
+      width: 100%;
+      border-radius: $border-radius-1;
+    }
+  }
+  .footer__fonts {
+    padding-bottom: $pd-2;
+    span {
+      color: rgba(179, 174, 174, 0.952);
+    }
+  }
+  .footer__fonts {
+    span:first-of-type {
+      font-size: $fs-0;
+      color: $bg-color;
+      text-transform: uppercase;
+    }
+    span {
+      color: #f0fff4d2;
+      font-size: ($fs-0)-3;
+      color: rgba(255, 255, 255, 0.233);
+    }
+  }
+}
+
+@include responsive("large") {
+  footer {
+    .footer__content {
+      .footer__bottom {
+        .tix__guidelines {
+          text-align: center;
+          .title {
+            display: none !important;
+          }
+          .tix__guidelines--detail {
+            .reponsive {
+              display: none !important;
+            }
+          }
+        }
+        .tix__partner {
+          display: none !important;
+        }
+        .tix__social {
+          text-align: center;
+          .tix__social--reponsive {
+            display: none !important;
+          }
+          .social {
+            .title {
+              display: none !important;
             }
           }
         }
       }
-      hr{
-        border-top: 1px solid $bg-color;
-      }
     }
-   
-  }
-  
-  .footer__end
-   {
-      .footer__end--img{
-       
-        img{
-          width:70%;
-           border-radius: 10px;
-         }
-      
-      }
-      .footer__fonts
-      {
-        span{
-          font-size:$fs-0;
-          color:rgba(255, 255, 255, 0.123)
+    .footer__end {
+      .footer__end--img {
+        img {
+          width: 100% !important;
         }
       }
-   }
-   @include responsive("large"){
-     footer{
-       .footer__content{
-         .footer__bottom{
-           .tix__guidelines{
-             text-align: center;
-             .title{
-               display: none!important;
-             }
-             .tix__guidelines--detail{
-               .reponsive{
-                 display: none!important;
-               }
-             }
-           }
-           .tix__partner{
-             display: none!important;
-           }
-           .tix__social{
-             text-align: center;
-             .tix__social--reponsive{
-               display: none!important;
-               
-             }
-             .social{
-               .title{
-                 display: none!important;
-               }
-             }
-           }
-         }
-       }
-      .footer__end{
-        .footer__end--img{
-          img{
-            width: 100%!important;
-            
-          }
-        }
-      }
-     }
-   }
-   @include responsive("medium"){
-    footer{
-     .footer__end{
-       .footer__end--img{
-        text-align: center!important;
-         img{
-           width: 20%!important;
-           
-         }
-       }
-     }
     }
   }
-  
+}
+
+@include responsive("medium") {
+  footer {
+    .footer__end {
+      .footer__end--img {
+        text-align: center !important;
+        img {
+          width: 20% !important;
+        }
+      }
+    }
+  }
+}
