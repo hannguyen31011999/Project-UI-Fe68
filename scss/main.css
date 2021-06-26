@@ -1114,6 +1114,16 @@ footer .footer__content .footer__bottom .tix__guidelines .tix__guidelines--detai
   color: rgba(196, 195, 195, 0.5);
 }
 
+footer .footer__content .footer__bottom .tix__guidelines .tix__guidelines--detail .document a {
+  text-decoration: none;
+  font-size: 13px;
+  color: white;
+}
+
+footer .footer__content .footer__bottom .tix__guidelines .tix__guidelines--detail .document a:hover {
+  color: rgba(196, 195, 195, 0.5);
+}
+
 footer .tix__partner h5 {
   color: #fff;
   font-size: 13px;
@@ -1160,16 +1170,8 @@ footer hr {
 }
 
 .footer__end .footer__end--img img {
-  width: 100%;
+  width: 70%;
   border-radius: 12px;
-}
-
-.footer__end .footer__fonts {
-  padding-bottom: 40px;
-}
-
-.footer__end .footer__fonts span {
-  color: rgba(179, 174, 174, 0.952);
 }
 
 .footer__end .footer__fonts span:first-of-type {
@@ -1180,7 +1182,7 @@ footer hr {
 
 .footer__end .footer__fonts span {
   color: #f0fff4d2;
-  font-size: 11px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.233);
 }
 
@@ -1203,7 +1205,7 @@ footer hr {
   footer .footer__content .footer__bottom .tix__social .tix__social--reponsive {
     display: none !important;
   }
-  footer .footer__content .footer__bottom .tix__social .social .title {
+  footer .footer__content .footer__bottom .tix__social--reponsive1 .title {
     display: none !important;
   }
   footer .footer__end .footer__end--img img {
@@ -1217,5 +1219,42 @@ footer hr {
   }
   footer .footer__end .footer__end--img img {
     width: 20% !important;
+  }
+  footer .footer__end .footer__fonts .footer__center {
+    text-align: center !important;
+  }
+  footer .footer__end .footer__fonts span, footer .footer__end .footer__fonts a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer__end .footer__fonts {
+    text-align: center;
+  }
+  .footer__end .footer__fonts .footer__center {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer__bottom .tix__guidelines .tix__guidelines--detail .document {
+    margin-bottom: 15px;
+  }
+  .footer__bottom .tix__guidelines .tix__guidelines--detail .document .thoa-thuan {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .footer__bottom .tix__guidelines .tix__guidelines--detail .document .bao-mat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }

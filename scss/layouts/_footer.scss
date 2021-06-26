@@ -23,6 +23,16 @@ footer {
               }
             }
           }
+          .document{
+            a{
+              text-decoration: none;
+              font-size: 13px;
+              color: white;
+              &:hover {
+                color: rgba(196, 195, 195, 0.5);
+              }
+            }
+          }
         }
       }
     }
@@ -86,15 +96,12 @@ footer {
 .footer__end {
   .footer__end--img {
     img {
-      width: 100%;
+      width: 70%;
       border-radius: $border-radius-1;
     }
   }
   .footer__fonts {
-    padding-bottom: $pd-2;
-    span {
-      color: rgba(179, 174, 174, 0.952);
-    }
+    
   }
   .footer__fonts {
     span:first-of-type {
@@ -104,7 +111,7 @@ footer {
     }
     span {
       color: #f0fff4d2;
-      font-size: ($fs-0)-3;
+      font-size: ($fs-0);
       color: rgba(255, 255, 255, 0.233);
     }
   }
@@ -133,20 +140,24 @@ footer {
           .tix__social--reponsive {
             display: none !important;
           }
-          .social {
-            .title {
-              display: none !important;
-            }
+         
+        }
+
+        .tix__social--reponsive1 {
+          .title {
+            display: none !important;
           }
         }
       }
     }
+    
     .footer__end {
       .footer__end--img {
         img {
-          width: 100% !important;
+          width:100% !important;
         }
       }
+      
     }
   }
 }
@@ -158,6 +169,47 @@ footer {
         text-align: center !important;
         img {
           width: 20% !important;
+        }
+      }
+      .footer__fonts {
+        .footer__center {
+          text-align: center !important;
+        }
+        span, a{
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px)
+{
+  .footer__end{
+    .footer__fonts
+    {
+      text-align: center;
+      .footer__center{
+        text-align: center;
+      }
+    }
+  }
+
+}
+@media (max-width: 575px) {
+  .footer__bottom{
+    .tix__guidelines{
+      .tix__guidelines--detail{
+        .document{
+          margin-bottom: 15px;
+          .thoa-thuan{
+            display: flex;
+            justify-content: flex-end;
+          }
+          .bao-mat{
+            display: flex;
+            justify-content:start;
+          }
         }
       }
     }
