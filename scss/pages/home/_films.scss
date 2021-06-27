@@ -3,7 +3,7 @@
   max-width: 940px;
   .carousel {
     overflow: visible;
-    .carousel-inner{
+    .carousel-inner {
       padding: 5px;
     }
     .films__item {
@@ -36,6 +36,11 @@
           position: absolute;
           top: 12px;
           right: 12px;
+          &--date {
+            @extend .films__point;
+            top: auto;
+            bottom: 12px;
+          }
           p:first-child {
             transform: scaleY(1.2);
             margin: 0;
@@ -58,6 +63,19 @@
           width: 100%;
           height: 100%;
           transition: all 0.2s;
+          border-radius: $border-radius-0;
+          .btn {
+            width: 100%;
+            background-color: $color-laber-1;
+            outline: none;
+            border: none;
+            border-radius: $border-radius-0;
+            padding: 10px;
+            font-size: 18px;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+          }
           img {
             display: block;
             width: 50px;
@@ -75,6 +93,14 @@
         }
       }
       .films__info {
+        p {
+          display: -webkit-box;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: 42px;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
         .films__laber {
           display: inline-block;
           text-align: center;
@@ -85,7 +111,8 @@
           min-width: 33px;
           margin-right: 8px;
           color: $bg-color;
-          &--red{
+
+          &--red {
             @extend .films__laber;
             background-color: $color-laber-1;
           }
@@ -102,10 +129,8 @@
       }
     }
     .carousel-control-prev {
-      top: 320px;
-      left: -100px;
-      width: 50px;
-      height: 150px;
+      top: -11%;
+      left: -15%;
       .carousel-control-prev-icon {
         width: 50px;
         height: auto;
@@ -113,10 +138,8 @@
       }
     }
     .carousel-control-next {
-      top: 320px;
-      right: -100px;
-      width: 50px;
-      height: 150px;
+      top: -11%;
+      right: -15%;
       .carousel-control-next-icon {
         width: 50px;
         height: auto;
@@ -126,12 +149,30 @@
   }
 }
 
+@include responsive("medium") {
+  .films {
+    .films__info {
+      .films__time {
+        display: none;
+      }
+    }
+  }
+}
+
+@include responsive("small"){
+  .films {
+    .films__info{
+      display: none;
+    }
+  }
+}
+
 .films {
   .nav-tabs {
     padding: $pd-1 0;
     border: none;
     .nav-link {
-      @include styleText($fs-1,$f-color-default,0,0,$fw-normal);
+      @include styleText($fs-1, $f-color-default, 0, 0, $fw-normal);
       border: none;
       &:hover {
         transform: scale(1.2);
