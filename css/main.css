@@ -1083,26 +1083,34 @@ footer hr {
 }
 .detail__info {
   position: relative;
+  background-color: #0a2029;
+  height: auto;
 }
 .detail__info .detail__background {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
+  height: auto;
   overflow: hidden;
 }
 .detail__info .detail__background img {
   width: calc(100% + 5px);
+  height: auto;
   filter: blur(15px);
   margin: -11px 0 -5px -10px;
 }
-.detail__info .detail__gradient {
+.detail__info .detail__background .detail__gradient {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(to top, #0a2029, transparent 100%);
+  z-index: 3;
+}
+.detail__info .detail__background #btnTrailer {
+  display: none;
 }
 .detail__info .detail__content {
   position: absolute;
@@ -1110,6 +1118,7 @@ footer hr {
   left: 50%;
   width: 100%;
   transform: translate3d(-50%, -50%, 0);
+  z-index: 4;
 }
 .detail__info .detail__content .row {
   align-items: center;
@@ -1220,6 +1229,52 @@ footer hr {
   margin-top: 10px;
   color: #e9e9e9;
   font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .detail__info .detail__background .detail__img {
+    margin: -10px -10px 1px -5px;
+    filter: none;
+  }
+  .detail__info .detail__background #btnTrailer {
+    display: block;
+  }
+  .detail__info .detail__background #btnTrailer img {
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: 0 0;
+    cursor: pointer;
+    filter: none;
+  }
+  .detail__info .detail__content {
+    position: static;
+    transform: none;
+    padding-bottom: 20px;
+  }
+  .detail__info .detail__content.container {
+    max-width: none;
+    padding-left: 0;
+  }
+  .detail__info .detail__content .row .content__img {
+    display: none;
+  }
+  .detail__info .detail__content .row .content__point {
+    display: none;
+  }
+  .detail__info .detail__content .row .content__films .films__name {
+    font-size: 20px;
+  }
+  .detail__info .detail__content .row .content__films .films__name span {
+    display: none;
+  }
+  .detail__info .detail__content .row .content__films .films__date,
+.detail__info .detail__content .row .content__films .films__time {
+    color: #9b9b9b;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

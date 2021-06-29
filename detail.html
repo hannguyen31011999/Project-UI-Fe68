@@ -26,13 +26,23 @@
   <body>
     <section class="detail__info">
       <div class="detail__background">
-        <img src="./img/trang-ti-16190592773054.jpg" alt="" />
+        <img src="./img/trang-ti-16190592773054.jpg" alt="" class="detail__img" />
+        <div class="detail__gradient"></div>
+        <button
+          id="btnTrailer"
+          data-fancybox
+          data-type="iframe"
+          data-src="https://www.youtube.com/embed/l2XBzUZidig"
+          href="javascript:;"
+        >
+          <img src="./img/play-video.png" alt="" />
+        </button>
       </div>
-      <div class="detail__gradient"></div>
+
       <div class="detail__content container">
         <div class="row">
           <div
-            class="col-sm-3 col-xs-4 content__img"
+            class="col-md-3 col-sm-4 content__img"
             style="
               background-image: url(./img/trang-ti-16194120693380_215x318.jpg);
             "
@@ -46,13 +56,13 @@
               <img src="./img/play-video.png" alt="" />
             </button>
           </div>
-          <div class="col-sm-5 content__films">
+          <div class="col-md-5 col-12 content__films">
             <p class="films__date">30.04.2021</p>
             <p class="films__name"><span>P</span> Trạng Tý Phiêu Lưu Ký</p>
             <p class="films__time">100 phút - 0 IMDb - 2D/Digital</p>
           </div>
-          <div class="col-sm-2"></div>
-          <div class="col-sm-2 content__point">
+          <div class="col-md-2"></div>
+          <div class="col-md-2 content__point">
             <div class="c100 p64 content__circle">
               <div class="circle__border"></div>
               <span>6.4</span>
@@ -81,16 +91,16 @@
     <!-- Fancybox  -->
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script>
-        // play video carousel
-    $('[data-fancybox]').fancybox({
-      toolbar: false,
-      smallBtn: true,
-      iframe: {
-        preload: false
-      },
-      width: 800,
-      height: 500,
-    })
+      // play video carousel
+      $("[data-fancybox]").fancybox({
+        toolbar: false,
+        smallBtn: true,
+        iframe: {
+          preload: false,
+        },
+        width: 800,
+        height: 500,
+      });
     </script>
   </body>
 </html>

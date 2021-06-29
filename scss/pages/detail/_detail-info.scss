@@ -1,31 +1,41 @@
 .detail__info {
   position: relative;
+  background-color: rgb(10, 32, 41);
+  height: auto;
   .detail__background {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
+    height: auto;
     overflow: hidden;
     img {
       width: calc(100% + 5px);
+      height: auto;
       filter: blur(15px);
       margin: -11px 0 -5px -10px;
     }
+    .detail__gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
+      z-index: 3;
+    }
+    #btnTrailer {
+      display: none;
+    }
   }
-  .detail__gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
-  }
+
   .detail__content {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     transform: translate3d(-50%, -50%, 0);
+    z-index: 4;
     .row {
       align-items: center;
       max-width: 870px;
@@ -135,6 +145,61 @@
           margin-top: 10px;
           color: $color-text-detail;
           font-size: $fs-0;
+        }
+      }
+    }
+  }
+}
+
+// responsive
+@include responsive("medium") {
+  .detail__info {
+    .detail__background {
+      .detail__img {
+        margin: -10px -10px 1px -5px;
+        filter: none;
+      }
+      #btnTrailer {
+        display: block;
+        img {
+          width: 80px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+          background: 0 0;
+          cursor: pointer;
+          filter: none;
+        }
+      }
+    }
+    .detail__content {
+      position: static;
+      transform: none;
+      padding-bottom: 20px;
+      &.container {
+        max-width: none;
+        padding-left: 0;
+      }
+      .row {
+        .content__img {
+          display: none;
+        }
+        .content__point {
+          display: none;
+        }
+        .content__films {
+          .films__name {
+            font-size: $fs-1;
+            span {
+              display: none;
+            }
+          }
+          .films__date,
+          .films__time {
+            color: $color-p;
+          }
         }
       }
     }
