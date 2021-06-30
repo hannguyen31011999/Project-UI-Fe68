@@ -19,7 +19,64 @@
 </head>
 
 <body>
- 
+    <section class="detail__info">
+        <div class="detail__background">
+          <img src="./img/trang-ti-16190592773054.jpg" alt="" class="detail__img" />
+          <div class="detail__gradient"></div>
+          <button
+            id="btnTrailer"
+            data-fancybox
+            data-type="iframe"
+            data-src="https://www.youtube.com/embed/l2XBzUZidig"
+            href="javascript:;"
+          >
+            <img src="./img/play-video.png" alt="" />
+          </button>
+        </div>
+  
+        <div class="detail__content container">
+          <div class="row">
+            <div
+              class="col-md-3 col-sm-4 content__img"
+              style="
+                background-image: url(./img/trang-ti-16194120693380_215x318.jpg);
+              "
+            >
+              <button
+                data-fancybox
+                data-type="iframe"
+                data-src="https://www.youtube.com/embed/l2XBzUZidig"
+                href="javascript:;"
+              >
+                <img src="./img/play-video.png" alt="" />
+              </button>
+            </div>
+            <div class="col-md-5 col-12 content__films">
+              <p class="films__date">30.04.2021</p>
+              <p class="films__name"><span>P</span> Trạng Tý Phiêu Lưu Ký</p>
+              <p class="films__time">100 phút - 0 IMDb - 2D/Digital</p>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2 content__point">
+              <div class="c100 p64 content__circle">
+                <div class="circle__border"></div>
+                <span>6.4</span>
+                <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+                </div>
+              </div>
+              <div class="content__stars">
+                <img src="./img/star1.png" alt="" />
+                <img src="./img/star1.png" alt="" />
+                <img src="./img/star1.png" alt="" />
+                <img src="./img/star1.2.png" alt="" />
+              </div>
+              <div class="content__review">183 người đánh giá</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
     <section class="information__detail">
@@ -305,23 +362,8 @@
             width: 800,
             height: 500,
         })
-        // loadmore js
-        
 
-        // $('a[href=#top]').click(function () {
-        //     $('body,html').animate({
-        //         scrollTop: 0
-        //     }, 600);
-        //     return false;
-        // });
-
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 50) {
-                $('.totop a').fadeIn();
-            } else {
-                $('.totop a').fadeOut();
-            }
-        });
+       
     </script>
 
 <script src="./main.js"></script>
