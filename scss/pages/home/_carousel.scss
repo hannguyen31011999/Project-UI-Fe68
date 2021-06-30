@@ -3,9 +3,9 @@
 }
 
 .carousel {
-    position: relative;
     overflow: hidden;
     .carousel__content {
+        position: relative;
         margin-bottom: 0;
         .carousel__item {
             position: relative;

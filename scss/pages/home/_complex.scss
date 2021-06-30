@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     .complex__content.container {
         padding-top: $pd-3;
-        max-width: 940px;
+        max-width: 70%;
         .complex__left {
             padding: 0;
             min-height: 708px;
@@ -127,8 +127,7 @@
     }
 }
 
-
-@include responsive('medium')
+@include responsive('large')
 {
     .complex {
         .complex__content.container {
@@ -149,12 +148,14 @@
                 }
             }
             .complex__center {
+                border-left: 1px solid rgba(219, 216, 216 , 0.5);
                 .complex__list--products {
                     li {
                         .complex__image {
                             text-align: left;
                             width: 15%;
                             border-top: 0;
+                            padding-left: $pd-0;
                         }
                         &::before {
                             content: '';
@@ -177,6 +178,100 @@
                 text-align: center;
                 p {
                     @include styleText($fs-0 , $f-color-default , 0 , 0 , $fw-bold-1);
+                }
+            }
+        }
+    }
+}
+
+@include responsive('medium')
+{
+    .complex {
+        .complex__content.container {
+            .complex__left {
+                border-bottom: 0;
+                .complex__list--producer {
+                    text-align: left;
+                    padding-left: $pd-1;
+                    li {
+                        &::before {
+                            width: 15%;
+                            left: 7%;
+                        }
+                    }
+                    .active {
+                        opacity: 1;
+                    }
+                }
+            }
+            .complex__center {
+                border-left: 1px solid rgba(219, 216, 216 , 0.5);
+                .complex__list--products {
+                    li {
+                        .complex__image {
+                            text-align: left;
+                            width: 15%;
+                            border-top: 0;
+                            padding-left: $pd-0;
+                        }
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: -5%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 1px;
+                            width: 90%;
+                            background-color: rgba(219, 216, 216 , 0.8);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive('small')
+{
+    .complex {
+        .complex__content.container {
+            .complex__left {
+                border-bottom: 0;
+                .complex__list--producer {
+                    text-align: left;
+                    padding-left: $pd-1;
+                    li {
+                        &::before {
+                            width: 15%;
+                            left: 8%;
+                        }
+                    }
+                    .active {
+                        opacity: 1;
+                    }
+                }
+            }
+            .complex__center {
+                border-left: 1px solid rgba(219, 216, 216 , 0.5);
+                .complex__list--products {
+                    li {
+                        .complex__image {
+                            text-align: left;
+                            width: 20%;
+                            border-top: 0;
+                            padding-left: $pd-0;
+                        }
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: -5%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 1px;
+                            width: 90%;
+                            background-color: rgba(219, 216, 216 , 0.8);
+                        }
+                    }
                 }
             }
         }

@@ -1,36 +1,28 @@
 // variable color
 $f-color-default: #000;
-$color-a-hover: #fa5238;
+$color-a-hover: #fb4226;
 $color-p: #9b9b9b;
 $color-span: #8bc541;
-$color-laber: #00ac4d;
-$color-laber-1: #fb4226;
-$color-op-hover: #60c5ef;
-$color-text-detail:  #e9e9e9;
-$text-color: #4a4a4a;
 $bg-footer: #222;
 $bg-color: #fff;
 $bg-linner: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
-$bg-linear-0: linear-gradient(to top,#000,transparent 100%);
-$bg-detail: #0a2029;
-
-// variable effect shadow
-// $shadow-0: 0 0 10px rgb(0 0 0 / 30%);
-// $shadow-1: 0 6px 12px rgb(0 0 0 / 18%);
+$bg-detail: #0A2029;
+$bg-icon : #00ac4d;
+$bg-review : rgba(12,27,54,.8);
+$color-text-p : #4a4a4a;
 
 // variable font-size
-$fs-0: 14px; //default
+$fs-0: 15px; //default
 $fs-1: 20px;
-$fs-2: 24px;
+$fs-2: 25px;
 $fs-3: 30px;
 $fs-4: 40px;
-$fs-5: 16px;
 
 //variable margin
 $mg-default: 5px;
 $mg-0: 10px;
 $mg-1: 15px;
-$mg-2: 30px;
+$mg-2: 25px;
 $mg-3: 50px;
 
 //variable border-radius
@@ -44,6 +36,7 @@ $pd-1: 20px;
 $pd-2: 40px;
 $pd-3: 60px;
 
+
 //variable line-height
 $line-height-0: 1.43; //default
 $line-height-1: 18px;
@@ -56,6 +49,7 @@ $fw-bold-1: 500;
 $fw-bold-2: 600;
 $fw-bold-3: 700;
 $fw-bold: bold;
+
 
 //break points
 $breakpoints:(
